@@ -1,1 +1,4 @@
 
+The Riemann zeta function or Euler-Riemann zeta function \zeta(s), is a function of a complex variable s that analytically continues the
+sum of the Dirichlet series:
+\zeta(s)=\sum_{n=1}^{inf}\frac{1}{n^s} when the real part of s is not greater than 1 
