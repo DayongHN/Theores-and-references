@@ -1,2 +1,17 @@
 Wesley Snyder  
 Mosaicking and Demosaicking in the Design of Multispectral Digital Cameras
+Unsupervised learning algorithm for signal separation
+Binary tree-based generic demosaicking algorithm for multispectral filter arrays
+Henrique Malvar
+High-quality gradient-corrected linear interpolation for demosaicing of color images
+
+A. Buades
+Joint Denoising and HDR for RAW Image Sequences
+Efficient joint noise removal and multi exposure fusion
+
+Leveraging Near-Field Lighting for Monocular Depth Estimation from Endoscopy Videos
+Joint Depth Prediction and Semantic Segmentation with Multi-View SAM
+
+https://www.cs.unc.edu/~ronisen/#teaching
+
+https://web.stanford.edu/class/cs231m/lectures/lecture-11-camera-isp.pdf
