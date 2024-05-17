@@ -1,0 +1,17 @@
+# 术后器械分割
+2015 year UNet 
+2015 year FCN8
+2017 year ResUNet
+2017 year PSPNet
+2017 year mask-rcnn
+2018 year DeepLabv3+ : MobileNetv2 + ResNet50
+2019 year ResUNet++
+2021 yuear ColonSegNet
+
+TernausNet-16
+LinkNet-34
+
+2021 年 Dual decoder attention network(DDANet) 在数据集 ROBUST-MIS 上测试 Dice coefficient 0.8739 , mean intersection-over union 0.8183， 帧率 101.36 frames;
+2022 year Rethinking surgical instrument segmentation: A background image can be all you need
+Surgical Tool segmentation using Generative Adversarial networks with unpaired training data
+
