@@ -4,4 +4,25 @@
 4. 网格生成
 5. surface texturing
 
+2017] Large-Scale Outdoor 3D Reconstruction on a Mobile Device
+motion stereo
+
+volumetric fusion
+
+free-space measurements for filter outliers
+
+extended kalman filter are used to propagate depth measurements in image space and their estimated uncertainteies over times
+
+the components for camera pose tracking and depth map fusion 
+
+use optical flow to compute high-quality depth maps from a monocular video sequence.
+use sparse feature tracking to estimate the camera poses
+
+plane sweep stereo
+
+6Dof camera pose tracking(Visual-inertial odometry)
+depth map estimation (plane sweeping)
+depth map fusion
+marching cubes algorithm
+
 https://github.com/WanchaoYao/SGM
