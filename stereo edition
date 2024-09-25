@@ -20,9 +20,13 @@ use sparse feature tracking to estimate the camera poses
 
 plane sweep stereo
 
-6Dof camera pose tracking(Visual-inertial odometry)
+6Dof camera pose tracking(Visual-inertial odometry and Extended kalman filter)
 depth map estimation (plane sweeping)
-depth map fusion
+depth map fusion(volumetric fusion)
+
+using an imu enables the tracking system to recover the absolute scale of the scene.
 marching cubes algorithm
+truncated signed distance function(TSDF) in the voxels
 
 https://github.com/WanchaoYao/SGM
+
