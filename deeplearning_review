@@ -1,0 +1,159 @@
+1. 树莓派色彩校正程序分析
+2. 色彩迁移算法
+3. 不同型号镜管的兼容
+
+一、人脸识别
+二、目标跟踪
+三、图像分割
+四、姿态估计
+四、高光谱重建
+
+
+一、实时手术器械分割
+ Efficient Net
+ 
+ Mask-RCNN, 
+ OR-UNet
+ DeepLabV3+
+ U-Net
+ RASNet
+ ResUNet
+ ColonSegNet
+ 
+ 优化器 Adam optimizer
+ 
+ 数据集 ROBUST-MIS Challenge 2019 datasets 5983 images
+ 数据预处理 
+ 网络结构 Dual decoder attention network(DDANet)
+ 
+ 评估指标：
+    Dice coefficient 0.8739
+	Mean intersection over union 0.8183
+	recall 0.8703
+	precision 0.9348
+	F2 score 0.8613
+	accuracy 0.9897
+	
+	帧率 101.36 frames-per-second
+	
+	
+DDANet:
+
+##1. Residual block
+
+input
+  |-------------------
+3x3 Conv              |
+  |                   |
+BN & Relu          1x1 Conv
+  |                   BN
+3x3 Conv              |
+  |                   |
+  BN                  |
+Squeeze&Excutation    |
+  |                   |
+  |                   |
+  |--------------------
+  |
+ Relu
+  |
+ output
+ 
+##2. Encode Block
+
+input
+  |
+Residual Block        
+  |                   
+Residual Block------to skip connection   
+  |                   
+2x2 MaxPool2D         
+  |                   
+  |
+ output
+ 
+##3. Decoder Block
+input
+  |
+4x4 transpose Conv        
+  |                   
+Concatenate<---skip connection   
+  |                   
+Residual Block         
+  |  
+Residual Block   
+  |
+ output
+ 
+##4. DDANet
+
+
+
+                           |
+|input(512x512)|->|Shared Encoder|---
+                           ||1x1 Conv& Sigmoid|  |1x1 Conv& Sigmoid||1x1 Conv& Sigmoid| |1x1 Conv& Sigmoid|
+						   |         |
+						   --->|Decoder block|---->|Decoder block|-->|Decoder block|-->|Decoder block|
+input size (512x512)
+loss binary cross-entropy, dice loss, categorical cross entropy loss
+optimizer learning rate 1e-4
+the models were trained for 200 epoches
+
+
+网络结构
+AlexNet
+VGG
+GoogLeNet
+ResNet
+DenseNet
+RexNeXt
+CondenseNet
+SE-Net
+ShuffleNet
+MobileNet V2
+
+Group convolution
+depth-wise cconvolution
+
+memory access cost
+degree of parallelism
+
+1. Equal channel width minimizes memory access cost
+2. Excessive group convolution increases MAC
+3. Network fragmentation reduces degree of parallelism
+4. Element-wise operations are non-negligible
+
+
+1.参数的有效性
+  DenseNet
+  EfficientNet
+2.训练和推断速度
+  RegNet
+  ResNeSt
+  TResNet
+  EfficientNet-X
+  NFNets
+  BoTNets
+
+3.渐进学习
+ 迁移学习
+ 对抗学习
+ curriculum learning
+ 
+Fused-MBConv
+Depthwise Separable Convolution
+dilated convolution
+Atrous Spational Pyramid Pooling
+
+
+正则化方法：
+Dropout
+RandAugment
+Mixup
+
+
+EfficientNetV1 VS EfficientNetV2
+1. 相比V1, V2中除了使用MBConv, 还是用了Fused-MBConv
+2. V2中使用了较小的expansion ratio, 相比V1普遍使用6，v2使用4
+3. V2使用3x3偏小的卷积核, 而V1使用很多5x5的卷积核， 由于3x3的感受野较小，
+   需要堆叠更多的卷积层结构来增加感受野
