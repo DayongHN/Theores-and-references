@@ -157,3 +157,39 @@ EfficientNetV1 VS EfficientNetV2
 2. V2中使用了较小的expansion ratio, 相比V1普遍使用6，v2使用4
 3. V2使用3x3偏小的卷积核, 而V1使用很多5x5的卷积核， 由于3x3的感受野较小，
    需要堆叠更多的卷积层结构来增加感受野
+
+cvat opencv 图像标注工具
+Affinite Photo
+ImageJ
+JabRef
+
+Dense atrous convolution
+
+Focal loss
+
+Yolo 
+
+posenet
+
+MobileNetV2
+
+     |input|--------------
+        |                |
+|1x1 Expansion Layer|    |
+        |                |
+	   |BN|              |
+		|                |
+	  |ReLU6|            |
+	    |                |
+|3x3 Depthwise Conv|     |
+        |                |
+	   |BN|              |
+		|                |
+	  |ReLU6|            |
+	  	 |               |
+|1x1 Projection Conv|    |
+        |                |
+	   |BN|              |
+		|                |
+        |-----------------               
+
