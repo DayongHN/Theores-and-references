@@ -1,6 +1,6 @@
 Depth estimation using transformer-based foundationStereo
 2. Object segmentation with SAM2
-3. camera pose tracking via bundleSDF
+3. camera pose tracking via bundleSDF neural 6-DoF tracking and 3D reconstruction of unknown objects
 4. neural implicit surface reconstruction using NeRF
 5. RoMa Robust feature matching for correspondence estanlishment
 
