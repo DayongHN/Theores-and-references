@@ -1,0 +1,6 @@
+Depth estimation using transformer-based foundationStereo
+2. Object segmentation with SAM2
+3. camera pose tracking via bundleSDF
+4. neural implicit surface reconstruction using NeRF
+5. RoMa Robust feature matching for correspondence estanlishment
+
