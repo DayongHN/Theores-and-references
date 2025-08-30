@@ -15,3 +15,15 @@ LinkNet-34
 2022 year Rethinking surgical instrument segmentation: A background image can be all you need
 Surgical Tool segmentation using Generative Adversarial networks with unpaired training data
 
+
+# update 2025 8 30
+methods to decrease attention time
+1) Shifted window attention
+2) efficient attention
+3) external attention
+4) axial attention
+5) SEA attention
+
+PP-MobileSeg : StrideFormer backbone, the aggregated attention Module, Valid Interpolate Module,
+StrideFormer: MV3 amd strided SEA attention
+
