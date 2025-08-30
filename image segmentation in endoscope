@@ -27,3 +27,26 @@ methods to decrease attention time
 PP-MobileSeg : StrideFormer backbone, the aggregated attention Module, Valid Interpolate Module,
 StrideFormer: MV3 amd strided SEA attention
 
+改进要点：
+ 1） 更高效的注意力机制
+SeaFormer：可能使用局部窗口注意力（类似 Swin Transformer）或线性注意力来减少计算量。
+SeaFormer++：可能引入：
+      动态稀疏注意力：根据输入动态选择重要的 token，减少冗余计算。
+      分组注意力：将特征分组处理，降低内存占用。
+2）轻量化设计改进
+SeaFormer++ 可能采用：
+   更深的可分离卷积：替代部分 Transformer 层，减少参数量。
+   参数共享：在注意力层中共享部分权重。
+   量化友好设计：便于部署到移动端（如 INT8 量化支持）
+3） 多尺度特征增强
+SeaFormer：使用常规 FPN（特征金字塔）进行多尺度融合。
+SeaFormer++：可能改进为：
+  BiFPN（双向特征金字塔）：更高效的特征融合。
+  跨尺度注意力：在不同尺度特征间进行注意力交互。
+4）训练策略优化
+SeaFormer++ 可能引入：
+更强的数据增强（如 AutoAugment、Mixup）。
+自监督预训练（如对比学习）。
+动态蒸馏（从大模型迁移知识）。
+
+
