@@ -28,4 +28,20 @@ RV1106          RKISP32
 10. SHARP
 11. Dehaze
 
+#-----------------------------------------
+HDR\ 去雾， 降噪等高级处理功能
+
+影响清晰度和噪声的模块主要包括Bayer NR, Demosaic, DPCC, YNR, UVNR, 3DNR, sharpen, Edgefilter等
+
+1. AEC
+2. NR / SHARP
+3. MERGE
+4. DRC
+5. Dehaze & Enhance
+6. DPCC
+7. Gamma
+8. Debayer
+9. GIC
+11. AF
+
 
