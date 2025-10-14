@@ -1,6 +1,27 @@
 % deeplearning
 DINO V2
 
+DINOv1 开创了自蒸馏自监督学习范式，通过动量教师架构与全局-局部对比目标， 首次证明vision transformer 在无标签数据上能学习到具有优异线性可分性的通用视觉特征，
+打破传统自监督方法对卷积架构的依赖；DINOV2在此基础上实现三大跃升：数据层面构建自动化清洗的1.4亿图像预训练集 LVD-142M,突破数据质量瓶颈；训练效率层面集成FlashAttention 
+与渐进式分辨率训练， 使Vit-g模型训练速度提升3倍；架构层面提出IBOT多粒度对齐机制， 在深度估计、实例分割等任务中实现零样本迁移准确率超越监督模型10-15%， 最终确立子监督
++transformer作为视觉基础模型的可行性路径
+
+#DINOV1
+DINOV1 是一种基于VISION transformer 的自监督学习方法， 通过无标签数据训练模型捕捉图像的全局语义特征， 其核心机制为：
+1. 自蒸馏架构
+2. 多尺度图像增强
+3. 对比损失优化
+
+关键技术点
+动量编码器：教师网络参数通过EMA更新
+小尺寸Path 嵌入
+k-nn 分类验证： 训练狗的vit 特征直接用于k近邻分类， 在imageNet 上实现78.3%准确率， 超越同期监督式CNN 模型
+
+# 性能优势
+语义分割能力：自监督vit 的注意力图可以定位物体轮廓， 无需微调即可分割主题区域
+2. 跨任务泛化性：特征迁移至检测、深度估计等下游任务时表现优异，验证了特征表达的通用性
+3. 训练效率：通过自蒸馏策略减少大规模数据标注的依赖， 使用于数据稀缺场景
+
 we learn our features with a discriminative self-supervised method that can be seen as a combination of
 DINO and IBOT losses with centering of SWAV. we also add a regularizer to spread features and a short high-resolution training phase
 
