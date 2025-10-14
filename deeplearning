@@ -1,0 +1,14 @@
+% deeplearning
+DINO V2
+
+we learn our features with a discriminative self-supervised method that can be seen as a combination of
+DINO and IBOT losses with centering of SWAV. we also add a regularizer to spread features and a short high-resolution training phase
+
+Loss = =sum p_{teacher} log p_{student}
+
+Koleo regularizer
+  L_{koleo} = - 1\n sum log(d_{n, i}) where d_{n, i} = minj=i||x_i - x_j||
+
+% 注意力机制
+FlashAttention
+
