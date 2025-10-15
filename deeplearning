@@ -33,3 +33,25 @@ Koleo regularizer
 % 注意力机制
 FlashAttention
 
+%---------------------------------- Vision Transformers -------------------------------------
+1. Vanilla Transformer
+2. Efficient-Former
+3. PoolFormer
+4. EdgeNet
+5. EfficientVit
+6. LeVit
+7. NextVit
+8. MobileVit
+9. EfficientNet
+10.mobilenetv3
+11.MobileOne
+12. FastVit
+13. swiftFormer
+14. SHVIT
+15. EfficientMod
+16. RepVit
+17. GhostNetV3
+18. MobileNetV4
+19. IFormer
+
+
