@@ -1,0 +1,4 @@
+% 2025 10 17
+1. 使用nn.AdatpiveAvgPool2d((1, 1)) 代替x.mean()
+2. 对tensor进行拉伸 x = x.view(x.size(0), -1)
+
