@@ -58,4 +58,13 @@ FlashAttention
 1. 使用 nn.AdaptiveAvgPool2d((1, 1))
 2. 使用 nn.Flatten()
 
+% -------------- 数据增强-----------------
+1. Auto Augmentation
+2. Augmix
+3. Distributed training on multiple GPUS
+4. Mixed precision training
+5. Auxiliary batch norm for advprop
+6. synchronized batch norm
+7. Mixup and cutmix with an ability to switch between the two alseo turn off augmentation at a certain epoch
+
 
