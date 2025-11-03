@@ -54,4 +54,8 @@ FlashAttention
 18. MobileNetV4
 19. IFormer
 
+%-------------------- timm transformers 转换rknn 报错 INVALID_ARGUMENT: Invalid rank for input :/Reduce men output 0 Got:4 expected:2 please fix either the inputs /outputs for the model
+1. 使用 nn.AdaptiveAvgPool2d((1, 1))
+2. 使用 nn.Flatten()
+
 
