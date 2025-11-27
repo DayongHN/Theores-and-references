@@ -2,3 +2,6 @@
 
 1. 通过多帧融合，提高图像清晰度和轮廓的锐利度
 2. 使用高动态图像进行重建
+
+% vision -imu 融合方法
+1. Multi-state constraint kalman filter(MSCKF)
