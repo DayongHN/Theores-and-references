@@ -5,3 +5,7 @@
 
 % vision -imu 融合方法
 1. Multi-state constraint kalman filter(MSCKF)
+
+% 
+The overview of the 3D reconstruction system we adopted in this paper is shown in, this system is based on a dense alignment.
+With the improved TSDF algorithm, this system has an excellent performance with limited memory without GPU acceleration
